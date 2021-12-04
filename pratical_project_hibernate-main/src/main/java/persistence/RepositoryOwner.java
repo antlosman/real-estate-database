@@ -46,9 +46,7 @@ public class RepositoryOwner {
             entityManager.getTransaction().rollback();
         }
     }
-    public void test() {
-        
-    }
+   
 
     public List<Owner> ownerList() {
         List<Owner> allOwners = null;
