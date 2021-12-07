@@ -48,26 +48,13 @@ public class SubMenuOptions {
                 case 4:
                     this.menuCustomer.menuChoice(input);
                     break;
-                case 5:
-                    break;
-                case 6:
-                    break;
-                case 7:
-                    break;
-                case 8:
-                    break;
-                case 9:
-                    break;
-                case 10:
-
-                    break;
                 case 100:
                     exit = true;
                     System.out.println("System closed");
                     break;
-//                default:
-//                    System.out.println("\nSorry, please enter valid Option");
-//                    menuChoice(input);
+                default:
+                    System.out.println("\nSorry, please enter valid Option");
+                    menuChoice(input);
             }
         }
     }

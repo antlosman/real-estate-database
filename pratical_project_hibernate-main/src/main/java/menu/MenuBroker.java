@@ -45,8 +45,6 @@ public class MenuBroker {
         } while (userChoice != 100);
     }
 
-    // TODO: 30.11.2021 I should make a class for validate methods
-
     // just an example of validate email method
 //    public boolean validateEmail(String email) {
 //        Pattern p = Pattern.compile("\\b[A-Z0-9._%-]+@[A-Z0-9.-]+\\.[A-Z]{2,4}\\b");
