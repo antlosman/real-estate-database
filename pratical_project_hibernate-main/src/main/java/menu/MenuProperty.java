@@ -76,7 +76,7 @@ public class MenuProperty {
                         System.out.println("\nSorry, please enter valid Option");
                         menuOptions(input);
                         break;
-                }// End of switch statement
+                }
             } while (userChoice != 100);
         }
 
@@ -113,7 +113,6 @@ public class MenuProperty {
             owner.setOwnerId(ownerId);
             property.setOwner(owner);
 
-            //////////////////////////////////
             repo.saveProperty(property);
         }
 
@@ -235,8 +234,7 @@ public class MenuProperty {
             System.out.println(property.toString());
         }
     }
-
-
+    
 }
 
 
