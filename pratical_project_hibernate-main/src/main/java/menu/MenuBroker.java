@@ -45,18 +45,6 @@ public class MenuBroker {
         } while (userChoice != 100);
     }
 
-    // just an example of validate email method
-//    public boolean validateEmail(String email) {
-//        Pattern p = Pattern.compile("\\b[A-Z0-9._%-]+@[A-Z0-9.-]+\\.[A-Z]{2,4}\\b");
-//        Matcher m = p.matcher("foobar@gmail.com");
-//        return m.find();
-//    }
-
-//    public boolean validateEmail2(String email) {
-//        String regexPattern = "^[a-zA-Z0-9_!#$%&'*+/=?`{|}~^.-]+@[a-zA-Z0-9.-]+$";
-//        return Pattern.compile(regexPattern).matcher(email).matches();
-//    }
-
     public boolean validateHasNotSpecialCharacters(String name) {
 
         String specialCharacters = " !#$%&'()*+,-./:;<=>?@[]^_`{|}~0123456789";
@@ -72,53 +60,21 @@ public class MenuBroker {
     }
 
     public boolean validateNameSize(String name) {
-//        if (name.length() >= 3 && name.length() <= 20) {
-//            return true;
-//        }
-//        return false;
-
-        // after simplify if-else
         return name.length() >= 3 && name.length() <= 20;
-
     }
-
-    // another example of validate name method
-    /*
-    public static boolean validateName(String name, int min, int max)
-    {
-        if (name.length() < min || name.length() > max)
-            return false;
-
-        Pattern pattern = Pattern.compile("[^a-zA-Z ]");
-        return !pattern.matcher(name).find();
-    }
-     */
 
     public void menuSaveNewBroker(Scanner scanner, RepositoryBroker repo) {
 
         String name = null;
-
         boolean validateName = false;
 
         while (!validateName) {
             System.out.println("Name cannot contain special character and should be 3 to 20 letters. ");
             System.out.print("Enter name: ");
             name = scanner.next();
-//            boolean result = false;
-//            if(validateHasNotSpecialCharacters(name) && validateNameSize(name)) {
-//                result = true;
-//            }
-//            validateName = result;
-
-            // simplify I
-//            boolean result = validateHasNotSpecialCharacters(name) && validateNameSize(name); // = true
-//            validateName = result;
-
-            // simplify II
             validateName = validateHasNotSpecialCharacters(name) && validateNameSize(name); // = true
         }
-
-
+        
         System.out.print("Enter phone number: ");
         String phoneNumber = scanner.next();
         while (!phoneNumber.matches("[0-9]+")) {
