@@ -4,13 +4,11 @@ import java.util.Scanner;
 
 public class SubMenuOptions {
     boolean exit = false;
-    private MenuCustomer menuCustomer;
     private MenuProperty menuProperty;
     private MenuOwner menuOwner;
     private MenuBroker menuBroker;
 
     public SubMenuOptions() {
-        this.menuCustomer = new MenuCustomer();
         this.menuProperty = new MenuProperty();
         this.menuOwner = new MenuOwner();
         this.menuBroker = new MenuBroker();
@@ -24,7 +22,6 @@ public class SubMenuOptions {
         System.out.println("1: Sub Menu - Property");
         System.out.println("2: Sub Menu - Broker");
         System.out.println("3: Sub Menu - Owner");
-        System.out.println("4: Sub Menu - Customer");
         System.out.println("100 - Quit");
         System.out.println("***************************************************");
 
@@ -44,9 +41,6 @@ public class SubMenuOptions {
                     break;
                 case 3:
                     this.menuOwner.menuChoice(input);
-                    break;
-                case 4:
-                    this.menuCustomer.menuChoice(input);
                     break;
                 case 100:
                     exit = true;
