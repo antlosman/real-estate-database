@@ -234,7 +234,7 @@ public class MenuProperty {
             System.out.println(property.toString());
         }
     }
-    
+
 }
 
 
