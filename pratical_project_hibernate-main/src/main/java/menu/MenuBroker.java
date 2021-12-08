@@ -74,7 +74,7 @@ public class MenuBroker {
             name = scanner.next();
             validateName = validateHasNotSpecialCharacters(name) && validateNameSize(name); // = true
         }
-        
+
         System.out.print("Enter phone number: ");
         String phoneNumber = scanner.next();
         while (!phoneNumber.matches("[0-9]+")) {
