@@ -47,7 +47,6 @@ public class RepositoryOwner {
         }
     }
 
-
     public List<Owner> ownerList() {
         List<Owner> allOwners = null;
         try {

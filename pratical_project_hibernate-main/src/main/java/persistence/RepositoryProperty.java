@@ -78,15 +78,6 @@ public class RepositoryProperty {
         } return allPropertyList;
     }
 
-    /*
-    Create class Repository and add methods to:
-    List all objects filtering by some year
-    List all objects filtering by a range of date, ex: between 10/10/2021 and 15/10/2021
-    List all objects filtering by the last month
-    List all objects filtering by yesterday date
-     */
-
-
     public List<Property> someYearPropertyList(LocalDate date) {
 
         String sql = "FROM Property as p WHERE YEAR(p.dateOfRegister)=year(:someYear)";
@@ -121,7 +112,6 @@ public class RepositoryProperty {
 
     public List<Property> lastWeekPropertyList(LocalDate firstDate, LocalDate secondDate) {
 
-
         String sql = "FROM Property WHERE dateOfRegister BETWEEN :date1 AND :date2";
 
         return entityManager
@@ -147,12 +137,5 @@ public class RepositoryProperty {
                 .createQuery(sql, PropertyBrokerOwner.class)
                 .getResultList();
     }
-
-
-
-
-
-
-
-
-} // end of class
+    
+}
