@@ -51,16 +51,9 @@ public class MenuOwner {
         } while (userChoice != 100);
     }
 
-
-    public boolean validateEmail2(String email) {
-        String regexPattern = "^[a-zA-Z0-9_!#$%&'*+/=?`{|}~^.-]+@[a-zA-Z0-9.-]+$";
-        return Pattern.compile(regexPattern).matcher(email).matches();
-    }
-
     public boolean validateHasNotSpecialCharacters(String name) {
 
         String specialCharacters = " !#$%&'()*+,-./:;<=>?@[]^_`{|}~0123456789";
-
         String[] splitName = name.split("");
 
         for (String s: splitName) {
@@ -76,22 +69,11 @@ public class MenuOwner {
             return true;
         }
         return false;
-    }// another example of validate name method
-    /*
-    public static boolean validateName(String name, int min, int max)
-    {
-        if (name.length() < min || name.length() > max)
-            return false;
-
-        Pattern pattern = Pattern.compile("[^a-zA-Z ]");
-        return !pattern.matcher(name).find();
     }
-     */
 
     public void saveNewOwner(Scanner scanner, RepositoryOwner repo) {
 
         String name = null;
-
         boolean validateName = false;
 
         while (!validateName) {
@@ -104,7 +86,6 @@ public class MenuOwner {
                 }
                 validateName = result;
         }
-
 
         System.out.print("Enter phone number: ");
         String phoneNumber = scanner.next();
@@ -127,7 +108,6 @@ public class MenuOwner {
         owner.setEmail(email);
         owner.setPhone(phoneNumber);
         repo.saveOwner(owner);
-
     }
 
     public void menuUpdateOwnerPhoneNumber(Scanner scanner) {
@@ -144,7 +124,6 @@ public class MenuOwner {
             System.out.print("Enter owner new phone number: ");
             String newPhoneNumber = scanner.next();
             repo.updateOwnerPhoneNumber(ownerId, newPhoneNumber);
-
     }
 
     public void menuAllOwners(RepositoryOwner repo) {
