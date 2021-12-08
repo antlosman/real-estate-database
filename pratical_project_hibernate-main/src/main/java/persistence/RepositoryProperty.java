@@ -137,5 +137,5 @@ public class RepositoryProperty {
                 .createQuery(sql, PropertyBrokerOwner.class)
                 .getResultList();
     }
-    
+
 }

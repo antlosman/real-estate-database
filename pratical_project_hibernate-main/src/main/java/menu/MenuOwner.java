@@ -5,7 +5,6 @@ import persistence.RepositoryOwner;
 
 import java.util.List;
 import java.util.Scanner;
-import java.util.regex.Pattern;
 
 public class MenuOwner {
 
