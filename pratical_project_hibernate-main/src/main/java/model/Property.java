@@ -26,7 +26,6 @@ public class Property {
     @Column(name = "price")
     private int price;
 
-    //Update your class broker adding new attribute ‘dateOfRegister”, type LocalDate
     @Column(name = "dateOfRegister")
     private LocalDate dateOfRegister;
 
