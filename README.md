@@ -6,8 +6,6 @@ This project is made with Java and Hibernate.
 
 Java 17
 
-Spring Boot 2.7.5
-
 Hibernate 5.4.24
 
 MySQL 8.0.21
